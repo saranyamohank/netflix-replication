@@ -1,0 +1,351 @@
+:root {
+  --primary: #141414;
+  --light: #F3F3F3;
+  --dark: 	#686868;
+}
+
+html, body {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding-top:2px;
+  padding-right:0px;
+  padding-left:0%;
+  background-color: var(--primary);
+  color: var(--light);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  line-height: 1.4;
+    overflow-x: hidden; //horizontal
+    overflow-y: scroll; //vertical
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  padding-top: 60px;  
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+header {
+  padding: 20px 20px 0 20px;
+  position: relative;
+  top: 0;
+  display: grid;  
+  grid-gap:5px;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: 
+   "nt mn mn sb . . . "; 
+  background-color: var(--primary);
+  width: 100%;
+  margin-bottom: 0px;  
+  
+}
+
+.netflixLogo {
+  grid-area: nt;
+  object-fit: cover;
+  width: 100px;
+  max-height: 100%;
+  
+  padding-left: 40px;
+  padding-top: 0px;  
+}
+
+.netflixLogo img {  
+  height: 35px;     
+}
+
+#logo {
+  color: #E50914;  
+  margin: 0; 
+  padding: 0; 
+}
+	
+
+
+
+.main-nav {
+  grid-area: mn;
+  padding: 0 30px 0 1px;
+  
+}
+
+.main-nav a {
+  color: var(--light);
+  text-decoration: none;
+  margin: 10px; 
+ 
+}
+
+.main-nav a:hover {
+  color: var(--dark);
+}
+
+.sub-nav {
+  grid-area: sb;
+  padding: 0 80px 0 30px;
+  padding-top: 0px;
+  font-weight:400px;
+}
+
+.sub-nav a {
+  color: var(--light);
+  text-decoration: none;
+  margin: 12px;
+  padding-top: 2px;
+}
+
+.sub-nav img{
+		border-radius:6px;
+	
+}
+.dropdown {
+  float:left;
+  position: relative;
+  display: inline-block;
+
+}
+
+.dropdown .dropbtn {
+  font-size: 18px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 22px 10px;
+  padding-left:0px;
+  background-color:#141414;
+  font-family: inherit;
+  margin: 0;
+
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:none;
+	right:0;
+  }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+ 
+  
+}
+
+.dropdown-content a {
+  float:left;
+  color: white;
+  padding: 3px 7px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size:11px;
+}
+
+.dropdown-content a:hover {
+  text-decoration:underline;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content img{
+	margin:1px;
+	width:33px;
+	height:33px;
+	margin-left:1px;
+	margin-right:21px;
+}
+
+
+.netflixLogo,
+  .main-nav,
+  .sub-nav{
+			display:flex;
+			
+  }
+.banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  
+}
+video {
+  min-width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.overlay
+{
+    
+	width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  background-size: 3px 3px;
+  z-index: 2
+  mix-blend-mode: overlay;
+	
+	
+	
+	
+}
+.movieTitle
+{
+    max-width: 500px;
+	padding-top:160px;
+	padding-left:120px;
+}
+.banner .overlay h4
+{
+    color: rgba(255, 255, 2555, 0.5);
+    font-weight: 500;
+	padding-left:120px;
+}
+.banner .overlay h4 span
+{
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255, 2555, 0.5);
+}
+.banner .overlay h4 span:first-child
+{
+    padding-left: 0;
+}
+.banner .overlay h4 span:last-child
+{
+    border-right: none;
+}
+.banner .overlay h4 span i
+{
+   background: #de0611;
+   color:#fff;
+   padding: 0 8px;
+   display: inline-block;
+   font-style: normal;
+   border-radius: 2px;
+}
+.banner .overlay p
+{
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.2em;
+    color:#fff;
+    margin: 10px 0 20px;
+	padding-left:120px;
+}
+.banner .overlay .buttons
+{
+    position: relative;
+	padding-left:120px;
+
+}
+.banner .overlay .buttons a{
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: white;
+    color: black;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 800px;
+    letter-spacing: 1.5px;
+	border-radius:5px;
+	box-sizing:300px;
+	font-size:1.3rem;
+    
+}
+
+.banner .overlay .buttons a:nth-child(2)
+{
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 2555, 0.1);
+}
+.banner .overlay .buttons a:hover:nth-child(2)
+{
+    background:#4d4d4d;
+}
+
+
+
+/* MAIN CONTIANER */
+.main-container {
+  padding: 50px;
+  padding-left:60px;
+  padding-top:0rem;
+}
+.box {
+  display: grid;
+  grid-gap: 4.4px;
+  grid-template-columns: repeat(6, minmax(100px, 1fr));
+}
+
+.box a {
+  transition: transform .9s;  
+}
+
+.box a:hover {
+  transition: transform .3s;
+  -ms-transform: scale(1.4);
+  -webkit-transform: scale(1.4);  
+  transform: scale(1.4);
+}
+
+.box img {
+  border-radius: 2px;
+}
+
+/* LINKS */
+.link {
+  padding: 50px;
+}
+
+.sub-links ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap:-90px;
+	
+}
+
+.sub-links a {
+  color: var(--dark);
+  text-decoration: none;
+}
+.sub-links a:hover {
+  color: var(--dark);
+  text-decoration: underline;
+}
+
+.logos a{
+  padding: 10px;
+}
+
+.logo {
+  color: var(--dark);
+}
+
+
+/* FOOTER */
+footer {
+  color: var(--dark);
+  margin-top: 5px;
+  padding-left:14rem;
+  font-size:12px;
+}
